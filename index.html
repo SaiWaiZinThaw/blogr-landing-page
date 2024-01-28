@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="./dist/output.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <title>Frontend Mentor | [Blogr]</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="m-0 p-0 overflow-x-hidden">
+    <main class="w-screen">
+      <header>
+        <div
+          id="header"
+          class="pb-28 rounded-bl-[100px]"
+          style="
+            background: url('./images/bg-pattern-intro-desktop.svg'),
+              linear-gradient(
+                145deg,
+                rgba(255, 143, 112, 1) 1%,
+                rgba(255, 82, 93, 1) 28%
+              );
+            background-size: cover;
+            background-position: right;
+            background-repeat: no-repeat;
+          "
+        >
+          <div class="flex items-center pt-20 px-28 justify-between">
+            <div class="lg:basis-8/12 flex items-center justify-start">
+              <img src="./images/logo.svg" alt="logo" />
+
+              <div
+                class="basis-8/12 lg:flex items-center gap-5 justify-center hidden"
+              >
+                <span
+                  class="font-Overpass cursor-pointer text-white text-lg font-semibold hover:underline"
+                  >Product
+                  <img
+                    src="./images/icon-arrow-light.svg"
+                    alt="arrow"
+                    class="inline-block ml-2"
+                /></span>
+                <span
+                  class="font-Overpass cursor-pointer text-white text-lg font-semibold hover:underline"
+                  >Company
+                  <img
+                    src="./images/icon-arrow-light.svg"
+                    alt="arrow"
+                    class="inline-block ml-2" /></span
+                ><span
+                  class="font-Overpass cursor-pointer text-white text-lg font-semibold hover:underline"
+                  >Connect
+                  <img
+                    src="./images/icon-arrow-light.svg"
+                    alt="arrow"
+                    class="inline-block ml-2"
+                /></span>
+              </div>
+            </div>
+
+            <div id="menu" class="lg:hidden cursor-pointer">
+              <svg
+                id="hamburger"
+                width="32"
+                height="18"
+                xmlns="http://www.w3.org/2000/svg"
+                class="block"
+              >
+                <g fill="#FFF" fill-rule="evenodd">
+                  <path d="M0 0h32v2H0zM0 8h32v2H0zM0 16h32v2H0z" />
+                </g>
+              </svg>
+
+              <svg
+                width="26"
+                id="close"
+                height="26"
+                xmlns="http://www.w3.org/2000/svg"
+                class="hidden"
+              >
+                <path
+                  d="M23.607.98l1.414 1.413L14.414 13l10.607 10.607-1.414 1.414L13 14.414 2.393 25.021.98 23.607 11.586 13 .98 2.393 2.393.98 13 11.586 23.607.98z"
+                  fill="#FFF"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+
+            <div
+              id="mobileNav"
+              class="hidden absolute bg-white lg:hidden flex flex-col items-center justify-center gap-8 w-[80%] left-0 right-0 mx-auto p-10 top-40 rounded-xl"
+            >
+              <div class="flex flex-col items-center justify-center gap-2">
+                <div>
+                  <span
+                    class="menu-Item font-Overpass cursor-pointer text-lg font-semibold hover:underline"
+                    >Product
+                  </span>
+                  <img
+                    src="./images/icon-arrow-dark.svg"
+                    alt="arrow"
+                    class="inline-block ml-2 pointer-events-none"
+                  />
+                </div>
+                <ul
+                  class="bg-gray-200 py-4 px-24 flex flex-col gap-1 rounded-lg hidden duration-300 ease-in animate__animated"
+                >
+                  <li class="flex flex-col">
+                    <a href="#">Contact</a>
+                    <a href="#">Newsletter</a>
+                    <a href="#">LinkedIn</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="flex flex-col items-center justify-center gap-2">
+                <div>
+                  <span
+                    class="menu-Item font-Overpass cursor-pointer text-lg font-semibold hover:underline"
+                    >Company
+                  </span>
+                  <img
+                    src="./images/icon-arrow-dark.svg"
+                    alt="arrow"
+                    class="inline-block ml-2 pointer-events-none"
+                  />
+                </div>
+                <ul
+                  class="bg-gray-200 py-4 px-24 flex flex-col gap-3 rounded-lg hidden duration-300 ease-in animate__animated"
+                >
+                  <li class="flex flex-col">
+                    <a href="#">Contact</a>
+                    <a href="#">Newsletter</a>
+                    <a href="#">LinkedIn</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="flex flex-col items-center justify-center gap-2">
+                <div>
+                  <span
+                    class="menu-Item font-Overpass cursor-pointer text-lg font-semibold hover:underline"
+                    >Company
+                  </span>
+                  <img
+                    src="./images/icon-arrow-dark.svg"
+                    alt="arrow"
+                    class="inline-block ml-2 pointer-events-none"
+                  />
+                </div>
+                <ul
+                  class="bg-gray-200 py-4 px-24 flex flex-col gap-3 rounded-lg hidden duration-300 ease-in animate__animated"
+                >
+                  <li class="flex flex-col">
+                    <a href="#">Contact</a>
+                    <a href="#">Newsletter</a>
+                    <a href="#">LinkedIn</a>
+                  </li>
+                </ul>
+              </div>
+
+              <hr class="w-full" />
+
+              <a href="#" class="text-lg font-Overpass font-semibold">Login</a>
+              <button
+                id="btn"
+                class="w-[125px] h-[50px] duration-300 rounded-full hover:bg-white font-Overpass font-semibold text-lg border border-solid border-white hover:border-light-red bg-light-red text-white hover:text-txt-light-red"
+              >
+                Sign Up
+              </button>
+            </div>
+
+            <div
+              class="basis-4/12 lg:flex gap-5 items-center justify-end hidden"
+            >
+              <a href="#" class="text-white text-lg font-Overpass font-semibold"
+                >Login</a
+              >
+              <button
+                class="w-[125px] h-[50px] duration-300 rounded-full bg-white font-Overpass font-semibold text-lg border border-solid border-white hover:border-light-red hover:bg-light-red hover:text-white text-txt-light-red"
+              >
+                Sign Up
+              </button>
+            </div>
+          </div>
+          <h1 class="font-Ubuntu text-6xl text-white text-center py-10">
+            A modern Publishing platform
+          </h1>
+          <p class="text-center font-Ubuntu text-2xl text-neutral-300 mb-10">
+            Grow your audience and build your online brand
+          </p>
+
+          <div class="flex items-center justify-center gap-5 pb-10">
+            <button
+              class="w-[140px] h-[50px] duration-300 rounded-full bg-white font-Overpass font-semibold text-lg border border-solid border-white hover:border-light-red hover:bg-light-red hover:text-white text-txt-light-red"
+            >
+              Start for Free
+            </button>
+            <button
+              class="w-[140px] h-[50px] duration-300 rounded-full bg-txt-light-red font-Overpass font-semibold text-lg border border-solid border-white hover:border-white hover:bg-white hover:text-txt-light-red text-white"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+      </header>
+      <div class="pt-40">
+        <h1
+          class="text-center font-Overpass text-black font-semibold lg:text-4xl text-2xl"
+        >
+          Designed for the future
+        </h1>
+        <div class="grid lg:grid-cols-2 grid-cols-1">
+          <div class="lg:m-28 w-screen">
+            <h1
+              class="lg:text-left font-Overpass lg:text-3xl text-xl font-semibold mb-10 mx-3"
+            >
+              Introducing an extensible editor
+            </h1>
+            <p class="mx-3 lg:text-left font-Overpass text-lg text-neutral-500">
+              Blogr features an exceedingly intuitive interface which lets you
+              focus on one thing: creating content. The editor supports
+              management of multiple blogs and allows easy manipulation of
+              embeds such as images, videos, and Markdown. Extensibility with
+              plugins and themes provide easy ways to add functionality or
+              change the looks of a blog.
+            </p>
+          </div>
+
+          <div
+            class="lg:row-span-2 lg:translate-x-[30%] lg:-order-none -order-1"
+          >
+            <img
+              src="./images/illustration-editor-desktop.svg"
+              alt="illustration-editor-desktop"
+            />
+          </div>
+
+          <div class="lg:m-28 mt-10">
+            <h1
+              class="lg:text-left font-Overpass lg:text-3xl text-xl font-semibold mb-10 mx-3"
+            >
+              Robust content management
+            </h1>
+            <p class="mx-3 lg:text-left font-Overpass text-lg text-neutral-500">
+              Flexible content management enables users to easily move through
+              posts. Increase the usability of your blog by adding customized
+              categories, sections, format, or flow. With this functionality,
+              you’re in full control.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="w-screen relative flex lg:justify-end flex-col lg:flex-row py-[80px] rounded-bl-[100px] rounded-tr-[100px] mt-[300px]"
+        style="
+          background: url('./images/bg-pattern-circles.svg'),
+            linear-gradient(
+              106deg,
+              rgba(47, 47, 61, 1) 21%,
+              rgba(63, 65, 100, 1) 28%
+            );
+
+          background-repeat: no-repeat;
+        "
+      >
+        <img
+          src="./images/illustration-phones.svg"
+          alt="illustration-phones"
+          class="absolute left-0 lg:-translate-y-16 lg:mx-20 -translate-y-[50%]"
+        />
+
+        <div
+          class="lg:ml-60 lg:pt-20 lg:pb-40 pt-[250px] flex flex-col justify-center items-center"
+        >
+          <h1
+            class="text-start font-Overpass lg:text-4xl text-2xl font-semibold text-white pb-8 w-[380px]"
+          >
+            State of the Art Infrastructure
+          </h1>
+          <p
+            class="text-start font-Overpass lg:text-lg text-md text-neutral-300 w-[380px]"
+          >
+            With reliability and speed in mind, worldwide data centers provide
+            the backbone for ultra-fast connectivity. This ensures your site
+            will load instantly, no matter where your readers are, keeping your
+            site competitive.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-3 lg:flex-row items-center lg:py-20 py-10">
+        <img
+          src="./images/illustration-laptop-desktop.svg"
+          alt="illustration-laptop-desktop"
+          class="lg:basis-6/12 lg:-translate-x-72 w-[500px]"
+        />
+
+        <div class="lg:basis-6/12 lg:mr-40 mx-3">
+          <h1 class="font-Overpass lg:text-4xl text-2xl font-semibold mb-8">
+            Free, open, simple
+          </h1>
+          <p class="font-Overpass text-lg text-neutral-500 mb-20">
+            Blogr is a free and open source application backed by a large
+            community of helpful developers. It supports features such as code
+            syntax highlighting, RSS feeds, social media integration,
+            third-party commenting tools, and works seamlessly with Google
+            Analytics. The architecture is clean and is relatively easy to
+            learn.
+          </p>
+
+          <h1 class="font-Overpass lg:text-4xl text-2xl font-semibold mb-8">
+            Powerful tooling
+          </h1>
+          <p class="font-Overpass text-lg text-neutral-500 mb-20">
+            Batteries included. We built a simple and straightforward CLI tool
+            that makes customization and deployment a breeze, but capable of
+            producing even the most complicated sites.
+          </p>
+        </div>
+      </div>
+      <div class="bg-very-dark-black-blue rounded-tr-[100px] py-20">
+        <div
+          class="grid lg:grid-cols-4 lg:w-[1400px] mx-auto w-screen grid-cols-1"
+        >
+          <img src="./images/logo.svg" alt="logo" class="mx-auto mb-8" />
+
+          <div class="flex flex-col items-center justify-center mb-5 gap-1">
+            <a
+              href="#"
+              class="font-Overpass lg:text-md text-sm text-white font-semibold hover:underline my-4"
+              >Product</a
+            >
+
+            <a
+              href="#"
+              class="font-Overpass lg:text-md text-sm text-neutral-400 font-semibold hover:underline"
+              >Overview</a
+            >
+
+            <a
+              href="#"
+              class="font-Overpass lg:text-md text-sm text-neutral-400 font-semibold hover:underline"
+              >Pricing</a
+            >
+
+            <a
+              href="#"
+              class="font-Overpass lg:text-md text-sm text-neutral-400 font-semibold hover:underline"
+              >Marketplace</a
+            >
+
+            <a
+              href="#"
+              class="font-Overpass lg:text-md text-sm text-neutral-400 font-semibold hover:underline"
+              >Features</a
+            >
+
+            <a
+              href="#"
+              class="font-Overpass lg:text-md text-sm text-neutral-400 font-semibold hover:underline"
+              >Integration</a
+            >
+          </div>
+
+          <div class="flex flex-col items-center justify-center mb-5 gap-1">
+            <a
+              href="#"
+              class="font-Overpass lg:text-md text-sm text-white font-semibold hover:underline my-4"
+              >Company</a
+            >
+
+            <a
+              href="#"
+              class="font-Overpass text-neutral-400 lg:text-md text-sm font-semibold hover:underline"
+              >About</a
+            >
+
+            <a
+              href="#"
+              class="font-Overpass text-neutral-400 lg:text-md text-sm font-semibold hover:underline"
+              >Team</a
+            >
+
+            <a
+              href="#"
+              class="font-Overpass text-neutral-400 lg:text-md text-sm font-semibold hover:underline"
+              >Blog</a
+            >
+
+            <a
+              href="#"
+              class="font-Overpass text-neutral-400 lg:text-md text-sm font-semibold hover:underline"
+              >Carrers
+            </a>
+          </div>
+
+          <div class="flex flex-col items-center justify-center mb-5 gap-1">
+            <a
+              href="#"
+              class="font-Overpass text-white lg:text-md text-sm font-semibold hover:underline my-4"
+              >Contact</a
+            >
+
+            <a
+              href="#"
+              class="font-Overpass text-neutral-400 lg:text-md text-sm font-semibold hover:underline"
+              >Newsletter</a
+            >
+
+            <a
+              href="#"
+              class="font-Overpass text-neutral-400 lg:text-md text-sm font-semibold hover:underline"
+              >LinkedIn</a
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
